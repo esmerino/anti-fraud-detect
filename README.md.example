@@ -44,13 +44,13 @@
 
      # Local
      git remote add production dokku@your.server.ip.address:untitled_application
-     dokku --remote production git:set deploy-branch main
-     dokku --remote production config:set RAILS_ENV=production RAILS_MASTER_KEY=`cat config/credentials/production.key`
+     dokku --remote git:set deploy-branch main
+     dokku --remote config:set RAILS_ENV=production RAILS_MASTER_KEY=`cat config/credentials/production.key`
 
      git push production main
 
      # Operations
 
-     dokku --remote production ps:report untitled_application
-     dokku --remote production ps:scale untitled_application web=1 worker=1
-     dokku --remote production logs untitled_application -t
+     dokku --remote ps:report untitled_application
+     dokku --remote ps:scale untitled_application web=1 worker=1
+     dokku --remote logs untitled_application -t
