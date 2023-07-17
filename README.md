@@ -42,7 +42,16 @@
      dokku postgres:link anti-fraud-detect-postgres anti-fraud-detect
      dokku redis:create anti-fraud-detect-redis
      dokku redis:link anti-fraud-detect-redis anti-fraud-detect
+     dokku storage:ensure-directory anti-fraud-detect
      dokku proxy:ports-set anti-fraud-detect http:80:3000
+
+     # Storage
+
+     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/storage
+     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/db/model
+
+     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/storage
+     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/db/model
 
      # Local
      git remote add production dokku@your.server.ip.address:anti-fraud-detect
@@ -52,10 +61,11 @@
      git push production main
 
      # Operations
-
      dokku --remote production ps:report anti-fraud-detect
+     dokku --remote production storage:list
      dokku --remote production ps:scale web=1 worker=1
      dokku --remote production logs anti-fraud-detect -t
      dokku --remote production ps:stop
      dokku --remote production ps:start
+     dokku --remote production ps:restart
      dokku --remote production run bundle exec rails c
