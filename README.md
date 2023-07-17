@@ -54,5 +54,8 @@
      # Operations
 
      dokku --remote production ps:report anti-fraud-detect
-     dokku --remote production ps:scale anti-fraud-detect web=1 worker=1
+     dokku --remote production ps:scale web=1 worker=1
      dokku --remote production logs anti-fraud-detect -t
+     dokku --remote production ps:stop
+     dokku --remote production ps:start
+     dokku --remote production run bundle exec rails c
