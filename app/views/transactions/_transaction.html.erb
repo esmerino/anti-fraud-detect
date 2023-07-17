@@ -1,56 +1,58 @@
-<div class="card">
-  <div class="card-body">
-    <div class="clearfix">
-      <h4 class="header-title">Transaction was created at: <%= transaction.created_at %></h4>
-      <p class="sub-header">
-        Transaction are create on one minute by minute
-      </p>
-    </div>
-    <div class="table-responsive">
-      <table class="table table-sm table-centered mb-0 font-14">
-        <tbody>
-          <tr>
-            <td><strong>transaction_id</strong></td>
-            <td><%= transaction.transaction_id %></td>
-          </tr>
-          <tr>
-            <td><strong>merchant_id</strong></td>
-            <td><%= transaction.merchant_id %></td>
-          </tr>
-          <tr>
-            <td><strong>user_id</strong></td>
-            <td><%= transaction.user_id %></td>
-          </tr>
-          <tr>
-            <td><strong>card_number</strong></td>
-            <td><%= transaction.card_number %></td>
-          </tr>
-          <tr>
-            <td><strong>transaction_date</strong></td>
-            <td><%= transaction.transaction_date %></td>
-          </tr>
-          <tr>
-            <td><strong>transaction_amount</strong></td>
-            <td><%= transaction.transaction_amount %></td>
-          </tr>
-          <tr>
-            <td><strong>device_id</strong></td>
-            <td><%= transaction.device_id %></td>
-          </tr>
-          <tr>
-            <td><strong>has_cbk</strong></td>
-            <td><%= transaction.has_cbk %></td>
-          </tr>
-          <tr>
-            <td><strong>fraud_score</strong></td>
-            <td><%= transaction.fraud_score %></td>
-          </tr>
-          <tr>
-            <td><strong>recommendation</strong></td>
-            <td><%= transaction.recommendation %></td>
-          </tr>
-        </tbody>
-      </table>
+<% if transaction %>
+  <div class="card">
+    <div class="card-body">
+      <div class="clearfix">
+        <h4 class="header-title">Transaction was created at: <%= transaction.created_at %></h4>
+        <p class="sub-header">
+          Transaction are create on one minute by minute
+        </p>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-sm table-centered mb-0 font-14">
+          <tbody>
+            <tr>
+              <td><strong>transaction_id</strong></td>
+              <td><%= transaction.transaction_id %></td>
+            </tr>
+            <tr>
+              <td><strong>merchant_id</strong></td>
+              <td><%= transaction.merchant_id %></td>
+            </tr>
+            <tr>
+              <td><strong>user_id</strong></td>
+              <td><%= transaction.user_id %></td>
+            </tr>
+            <tr>
+              <td><strong>card_number</strong></td>
+              <td><%= transaction.card_number %></td>
+            </tr>
+            <tr>
+              <td><strong>transaction_date</strong></td>
+              <td><%= transaction.transaction_date %></td>
+            </tr>
+            <tr>
+              <td><strong>transaction_amount</strong></td>
+              <td><%= transaction.transaction_amount %></td>
+            </tr>
+            <tr>
+              <td><strong>device_id</strong></td>
+              <td><%= transaction.device_id %></td>
+            </tr>
+            <tr>
+              <td><strong>has_cbk</strong></td>
+              <td><%= transaction.has_cbk %></td>
+            </tr>
+            <tr>
+              <td><strong>fraud_score</strong></td>
+              <td><%= transaction.fraud_score %></td>
+            </tr>
+            <tr>
+              <td><strong>recommendation</strong></td>
+              <td><%= transaction.recommendation %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+<% end %>

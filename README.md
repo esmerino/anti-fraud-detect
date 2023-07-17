@@ -46,13 +46,13 @@
 
      # Local
      git remote add production dokku@your.server.ip.address:anti-fraud-detect
-     dokku --remote git:set deploy-branch main
-     dokku --remote config:set RAILS_ENV=production RAILS_MASTER_KEY=`cat config/credentials/production.key`
+     dokku --remote production git:set deploy-branch main
+     dokku --remote production config:set RAILS_ENV=production RAILS_MASTER_KEY=`cat config/credentials/production.key`
 
      git push production main
 
      # Operations
 
-     dokku --remote ps:report anti-fraud-detect
-     dokku --remote ps:scale anti-fraud-detect web=1 worker=1
-     dokku --remote logs anti-fraud-detect -t
+     dokku --remote production ps:report anti-fraud-detect
+     dokku --remote production ps:scale anti-fraud-detect web=1 worker=1
+     dokku --remote production logs anti-fraud-detect -t
