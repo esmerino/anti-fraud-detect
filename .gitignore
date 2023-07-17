@@ -38,3 +38,4 @@
 /config/credentials/production.key
 
 /db/model/*
+!/db/model/.keep
