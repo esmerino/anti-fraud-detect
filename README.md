@@ -15,8 +15,10 @@
     If you don't have these installed, you can use [rails.new](https://rails.new) to help with the process.
 
 2. Run the `bin/setup` script.
-3. Start the application with `bin/dev`.
-4. Visit http://localhost:3000.
+3. Run the `rails anti_fraud:update_score_anti_fraud` script.
+4. Run the `rails anti_fraud:update_model_anti_fraud` script.
+5. Start the application with `bin/dev`.
+6. Visit http://localhost:3000.
 
 ## Deploy Dokku
      

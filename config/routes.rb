@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'home#index'
-  resources :home, only: [:index]
+  root to: 'transactions#index'
+  resources :transactions, only: [:index]
+  resources :faqs, only: [:index]
+  resources :anti_frauds, only:[:index, :create]
 end

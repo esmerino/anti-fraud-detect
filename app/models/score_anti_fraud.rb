@@ -1,0 +1,2 @@
+class ScoreAntiFraud < ApplicationRecord
+end

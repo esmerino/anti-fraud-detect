@@ -19,7 +19,7 @@
           <img src="<%= image_url('logo-sm.png') %>" alt="" height="24">
         </span>
         <span class="logo-lg">
-          <img src="<%= image_url('logo-light.png') %>" alt="" height="20">
+          <img src="<%= image_url('logo-sm.png') %>" alt="" height="20">
         </span>
       <% end -%>
     </div>
@@ -32,17 +32,24 @@
             <ul id="side-menu">
 
                 <li>
-                    <%= link_to home_index_path, data: { turbo: false } do %>
-                      <i class="mdi mdi-gift-outline"></i>
-                      <span> Home </span>
+                    <%= link_to anti_frauds_path, data: { turbo: false } do %>
+                      <i class="mdi mdi-api"></i>
+                      <span> API ANTI-FRAUD</span>
                     <% end -%>
                 </li>
 
                 <li>
-                    <a href="documentation/index.html" target="_blank">
-                        <i class="mdi mdi-gift-outline"></i>
-                        <span> Document </span>
-                    </a>
+                    <%= link_to transactions_path, data: { turbo: false } do %>
+                      <i class="mdi mdi-cash-usd-outline"></i>
+                      <span> TRANSACTIONS </span>
+                    <% end -%>
+                </li>
+
+                <li>
+                    <%= link_to faqs_path, data: { turbo: false } do %>
+                      <i class="mdi mdi-account-question-outline"></i>
+                      <span> F.A.Q </span>
+                    <% end -%>
                 </li>
 
             </ul>

@@ -7,3 +7,8 @@ production:
   - high
 :limits:
   connect_lab: 2
+:scheduler:
+  :schedule:
+    create_transactions_worker:
+      class: CreateTransactionsWorker
+      cron: '0 * * * * *'   # Runs once per minute

@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-title-box page-title-box-alt">
+        <h4 class="page-title">API ANTI-FRAUDS</h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <h4 class="header-title mb-2">1# Request Verify: Copy and paste the following curl command into your terminal</h4>
+            <pre><code class="bash hljs language-bash">curl <span class="hljs-string">"http://localhost:3000/anti_frauds"</span> \
+              -X POST \
+              -H <span class="hljs-string">"Accept: application/json"</span> \
+              -H <span class="hljs-string">"Content-Type: application/json"</span> \
+              -d <span class="hljs-string">'{
+                "transactions": [
+                  {
+                    "transaction_id" : 21320398,
+                    "merchant_id" : 29744,
+                    "user_id" : 97051,
+                    "card_number" : "434505******9116",
+                    "transaction_date" : "2019-11-31T23:16:32.812632",
+                    "transaction_amount" : 373,
+                    "device_id" : 285475
+                  }
+                ]
+              }'</span></code></pre>
+          </div>
+
+          <div class="row">
+            <h4 class="header-title mb-2">2# Request Verify: Copy and paste the following curl command into your terminal</h4>
+            <pre><code class="bash hljs language-bash">curl <span class="hljs-string">"http://localhost:3000/anti_frauds"</span> \
+              -X POST \
+              -H <span class="hljs-string">"Accept: application/json"</span> \
+              -H <span class="hljs-string">"Content-Type: application/json"</span> \
+              -d <span class="hljs-string">'{
+                "transactions": [
+                  {
+                    "transaction_id" : 21320398,
+                    "merchant_id" : 29744,
+                    "user_id" : 9705991,
+                    "card_number" : "434505******9116",
+                    "transaction_date" : "2019-11-31T23:16:32.812632",
+                    "transaction_amount" : 373,
+                    "device_id" : 285475
+                  }
+                ]
+              }'</span></code></pre>
+          </div>
+
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div>
+  </div>
+</div>
