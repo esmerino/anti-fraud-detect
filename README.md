@@ -17,8 +17,22 @@
 2. Run the `bin/setup` script.
 3. Run the `rails anti_fraud:update_score_anti_fraud` script.
 4. Run the `rails anti_fraud:update_model_anti_fraud` script.
-5. Start the application with `bin/dev`.
-6. Visit http://localhost:3000.
+5. Run the `rails anti_fraud:update_model_anti_fraud` script.
+6. Start the application with `rspec`
+7. Visit http://localhost:3000
+
+## Code
+
+     # Service
+     app/services/anti_fraud_service.rb
+
+## Testing application
+
+1. Visit http://anti-fraud-detect.146.190.169.253.sslip.io/anti_frauds
+
+2. If you need more information about the acquirer market, visit: http://anti-fraud-detect.146.190.169.253.sslip.io/faqs
+
+3. Check all processing on-line: http://anti-fraud-detect.146.190.169.253.sslip.io/transactions
 
 ## Deploy Dokku
      
