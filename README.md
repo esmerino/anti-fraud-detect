@@ -47,11 +47,11 @@
 
      # Storage
 
-     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/storage
-     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/db/model
+     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect/storage:/rails/storage
+     dokku storage:mount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect/db/model:/rails/db/model
 
-     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/storage
-     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect:/app/db/model
+     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect/storage:/rails/storage
+     dokku storage:unmount anti-fraud-detect /var/lib/dokku/data/storage/anti-fraud-detect/db/model:/rails/db/model
 
      # Local
      git remote add production dokku@your.server.ip.address:anti-fraud-detect
